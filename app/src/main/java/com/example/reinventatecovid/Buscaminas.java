@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
-import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 import java.util.Random;
@@ -16,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Buscaminas extends AppCompatActivity implements View.OnTouchListener{
     private Tablero fondo; //Es el fondo donde se escenifica nuestro tablero de buscaminas
+    private final Random r = new Random();
 
     private boolean activo = true;
     @RequiresApi(api = Build.VERSION_CODES.R)
@@ -90,7 +90,6 @@ public class Buscaminas extends AppCompatActivity implements View.OnTouchListene
 
     private void disponerBombas() {//Se encaraga de colocar las bomas de manera aleatoria en el tablero
         int cantidad = 8;
-        Random r = new Random();
         do {
             int fila = r.nextInt(8);
             int columna = r.nextInt(8);
@@ -128,14 +127,18 @@ public class Buscaminas extends AppCompatActivity implements View.OnTouchListene
         int columnamin = Math.max(columna - 1, 0);
         int columnamax = Math.min(columna + 1, 8-1);
 
-        total =+ mirarCasilla(filamin,columnamin,total);
-        total =+ mirarCasilla(filamin,columna,total);
-        total =+ mirarCasilla(filamin,columnamax,total);
-        total =+ mirarCasilla(fila,columnamin,total);
-        total =+ mirarCasilla(fila,columnamax,total);
-        total =+ mirarCasilla(filamax,columnamin,total);
-        total =+ mirarCasilla(filamax,columna,total);
-        total =+ mirarCasilla(filamax,columnamax,total);
+        if(fila != 0 && fila != 7){
+            total =mirarCasilla(fila,columnamin,total);
+            total =mirarCasilla(fila,columnamax,total);
+        }
+        if(columna != 0 && columna != 7){
+            total =mirarCasilla(filamin,columna,total);
+            total =mirarCasilla(filamax,columna,total);
+        }
+        total =mirarCasilla(filamin,columnamin,total);
+        total =mirarCasilla(filamin,columnamax,total);
+        total =mirarCasilla(filamax,columnamin,total);
+        total =mirarCasilla(filamax,columnamax,total);
 
         return total;
     }

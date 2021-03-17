@@ -1,10 +1,10 @@
 package com.example.reinventatecovid;
 
 public class Casilla {
-    public int x,y,ancho;
+    public float x,y,ancho;
     public int contenido=0;
     public boolean destapado=false;
-    public void fijarxy(int x,int y, int ancho) {//Crea una casilla
+    public void fijarxy(float x,float y, float ancho) {//Crea una casilla
         this.x=x;
         this.y=y;
         this.ancho=ancho;

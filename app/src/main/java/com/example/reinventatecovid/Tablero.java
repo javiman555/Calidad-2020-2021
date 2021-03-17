@@ -14,14 +14,15 @@ class Tablero extends View {
         super(context);
     }//constructor
 
+    @Override
     protected void onDraw(Canvas canvas) {//Dibuja el tablero
         canvas.drawRGB(0, 0, 0);
-        int ancho = 0;
+        float ancho = 0;
         if (canvas.getWidth() < canvas.getHeight())
             ancho = this.getWidth();
         else
             ancho = this.getHeight();
-        int anchocuadro = ancho / 8;
+        float anchocuadro = ancho / 8;
         Paint paint = new Paint();
         paint.setTextSize(50);
         Paint paint2 = new Paint();
@@ -30,11 +31,11 @@ class Tablero extends View {
         paint2.setARGB(255, 0, 0, 255);
         Paint paintlinea1 = new Paint();
         paintlinea1.setARGB(255, 255, 255, 255);
-        int filaActual = 0;
+        float filaActual = 0;
         for (int f = 0; f < 8; f++) {
             for (int c = 0; c < 8; c++) {
                 casillas[f][c].fijarxy(c * anchocuadro, filaActual, anchocuadro);
-                if (casillas[f][c].destapado == false)
+                if (!casillas[f][c].destapado)
                     paint.setARGB(153, 204, 204, 204);
                 else
                     paint.setARGB(255, 153, 153, 153);

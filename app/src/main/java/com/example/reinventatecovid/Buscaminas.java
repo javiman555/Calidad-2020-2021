@@ -1,6 +1,7 @@
 package com.example.reinventatecovid;
 
 
+import android.os.Build;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
@@ -10,17 +11,18 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 import java.util.Random;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Buscaminas extends AppCompatActivity implements View.OnTouchListener{
     private Tablero fondo; //Es el fondo donde se escenifica nuestro tablero de buscaminas
 
     private boolean activo = true;
+    @RequiresApi(api = Build.VERSION_CODES.R)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getWindow().setDecorFitsSystemWindows(false);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_buscaminas);
 
@@ -60,17 +62,7 @@ public class Buscaminas extends AppCompatActivity implements View.OnTouchListene
         if (activo)
             for (int f = 0; f < 8; f++) {
                 for (int c = 0; c < 8; c++) {
-                    if (fondo.getCasillas()[f][c].dentro((int) event.getX(),
-                            (int) event.getY())) {
-                        fondo.getCasillas()[f][c].destapado = true;
-                        if (fondo.getCasillas()[f][c].contenido == 80) {
-                            Toast.makeText(this, "Has sido infectado F",
-                                    Toast.LENGTH_LONG).show();
-                            activo = false;
-                        } else if (fondo.getCasillas()[f][c].contenido == 0)
-                            recorrer(f, c);
-                        fondo.invalidate();
-                    }
+                    hayBomba(f,c,event);
                 }
             }
         if (gano() && activo) {
@@ -81,6 +73,19 @@ public class Buscaminas extends AppCompatActivity implements View.OnTouchListene
         return true;
     }
 
+    private void hayBomba(int f, int c,MotionEvent event) {//Comprueba si el usuario ha tocado una bomba
+        if (fondo.getCasillas()[f][c].dentro((int) event.getX(),
+                (int) event.getY())) {
+            fondo.getCasillas()[f][c].destapado = true;
+            if (fondo.getCasillas()[f][c].contenido == 80) {
+                Toast.makeText(this, "Has sido infectado F",
+                        Toast.LENGTH_LONG).show();
+                activo = false;
+            } else if (fondo.getCasillas()[f][c].contenido == 0)
+                recorrer(f, c);
+            fondo.invalidate();
+        }
+    }
 
 
     private void disponerBombas() {//Se encaraga de colocar las bomas de manera aleatoria en el tablero
@@ -118,40 +123,26 @@ public class Buscaminas extends AppCompatActivity implements View.OnTouchListene
 
     int contarCoordenada(int fila, int columna) {//Se encaraga de obtener las sumas de los numeros cercanos a las bombas
         int total = 0;
-        if (fila - 1 >= 0 && columna - 1 >= 0) {
-            if (fondo.getCasillas()[fila - 1][columna - 1].contenido == 80)
-                total++;
-        }
-        if (fila - 1 >= 0) {
-            if (fondo.getCasillas()[fila - 1][columna].contenido == 80)
-                total++;
-        }
-        if (fila - 1 >= 0 && columna + 1 < 8) {
-            if (fondo.getCasillas()[fila - 1][columna + 1].contenido == 80)
-                total++;
-        }
+        int filamin = Math.max(fila - 1, 0);
+        int filamax = Math.min(fila + 1, 8-1);
+        int columnamin = Math.max(columna - 1, 0);
+        int columnamax = Math.min(columna + 1, 8-1);
 
-        if (columna + 1 < 8) {
-            if (fondo.getCasillas()[fila][columna + 1].contenido == 80)
-                total++;
-        }
-        if (fila + 1 < 8 && columna + 1 < 8) {
-            if (fondo.getCasillas()[fila + 1][columna + 1].contenido == 80)
-                total++;
-        }
+        total =+ mirarCasilla(filamin,columnamin,total);
+        total =+ mirarCasilla(filamin,columna,total);
+        total =+ mirarCasilla(filamin,columnamax,total);
+        total =+ mirarCasilla(fila,columnamin,total);
+        total =+ mirarCasilla(fila,columnamax,total);
+        total =+ mirarCasilla(filamax,columnamin,total);
+        total =+ mirarCasilla(filamax,columna,total);
+        total =+ mirarCasilla(filamax,columnamax,total);
 
-        if (fila + 1 < 8) {
-            if (fondo.getCasillas()[fila + 1][columna].contenido == 80)
-                total++;
-        }
-        if (fila + 1 < 8 && columna - 1 >= 0) {
-            if (fondo.getCasillas()[fila + 1][columna - 1].contenido == 80)
-                total++;
-        }
-        if (columna - 1 >= 0) {
-            if (fondo.getCasillas()[fila][columna - 1].contenido == 80)
-                total++;
-        }
+        return total;
+    }
+
+    private int mirarCasilla(int fila, int columna,int total) {//Combrueba si en una casilla hay una bomba
+        if (fondo.getCasillas()[fila][columna].contenido == 80)
+            total++;
         return total;
     }
 

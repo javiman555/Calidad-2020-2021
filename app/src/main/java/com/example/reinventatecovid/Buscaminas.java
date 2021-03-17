@@ -1,9 +1,6 @@
 package com.example.reinventatecovid;
 
-import android.content.Context;
-import android.graphics.Canvas;
-import android.graphics.Paint;
-import android.graphics.Typeface;
+
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
@@ -11,13 +8,13 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.Toast;
+import java.util.Random;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Buscaminas extends AppCompatActivity implements View.OnTouchListener{
     private Tablero fondo; //Es el fondo donde se escenifica nuestro tablero de buscaminas
-    int x, y;
-   //Son las distintas casillas de nuestro tablero
+
     private boolean activo = true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,12 +30,10 @@ public class Buscaminas extends AppCompatActivity implements View.OnTouchListene
         layout.addView(fondo);
 
         fondo.setCasillas(new Casilla[8][8]);
-        //casillas = new Casilla[8][8];
 
         for (int f = 0; f < 8; f++) {
             for (int c = 0; c < 8; c++) {
                 fondo.getCasillas()[f][c] = new Casilla();
-                //casillas[f][c] = new Casilla();
             }
         }
         this.disponerBombas();
@@ -48,7 +43,6 @@ public class Buscaminas extends AppCompatActivity implements View.OnTouchListene
 
     public void reiniciar(View v) {// Se encarga de reiniciar el tablero del buscaminas reiniciando las casillas del tablero
         fondo.setCasillas(new Casilla[8][8]);
-        //casillas = new Casilla[8][8];
         for (int f = 0; f < 8; f++) {
             for (int c = 0; c < 8; c++) {
                 fondo.getCasillas()[f][c] = new Casilla();
@@ -91,9 +85,10 @@ public class Buscaminas extends AppCompatActivity implements View.OnTouchListene
 
     private void disponerBombas() {//Se encaraga de colocar las bomas de manera aleatoria en el tablero
         int cantidad = 8;
+        Random r = new Random();
         do {
-            int fila = (int) (Math.random() * 8);
-            int columna = (int) (Math.random() * 8);
+            int fila = r.nextInt(8);
+            int columna = r.nextInt(8);
             if (fondo.getCasillas()[fila][columna].contenido == 0) {
                 fondo.getCasillas()[fila][columna].contenido = 80;
                 cantidad--;
@@ -107,10 +102,7 @@ public class Buscaminas extends AppCompatActivity implements View.OnTouchListene
             for (int c = 0; c < 8; c++)
                 if (fondo.getCasillas()[f][c].destapado)
                     cant++;
-        if (cant == 56)
-            return true;
-        else
-            return false;
+            return (cant == 56);
     }
 
     private void contarBombasPerimetro() {//Se encarga de poner un valor a las casillas cercanas a las bombas

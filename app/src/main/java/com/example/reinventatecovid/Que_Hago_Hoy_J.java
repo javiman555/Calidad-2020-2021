@@ -49,6 +49,10 @@ public class Que_Hago_Hoy_J extends AppCompatActivity {
         ListaPeliculas.add("-Madagascar");
         ListaPeliculas.add("-Bob Esponja");
         ListaPeliculas.add("-Shrek");
+        ListaPeliculas.add("-Shrek 2");
+        ListaPeliculas.add("-Shrek Tercero");
+        ListaPeliculas.add("-Shrek Felices Para Siempre");
+        //Y proximamente Shrek 5
         ListaPeliculas.add("-Bee movie");
         ListaPeliculas.add("-Bichos");
         ListaPeliculas.add("-Gru, mi villano favorito");

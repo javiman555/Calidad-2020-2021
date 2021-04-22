@@ -40,6 +40,30 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
+            <Button
+                android:id="@+id/button_emergencias2"
+                android:layout_width="230dp"
+                android:layout_height="69dp"
+                android:layout_marginStart="88dp"
+                android:layout_marginLeft="88dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="93dp"
+                android:layout_marginRight="93dp"
+                android:layout_marginBottom="1dp"
+                android:drawableLeft="@drawable/juegoosss1"
+                android:onClick="IrJuegos"
+                android:text="@string/juegos"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold|italic"
+                app:backgroundTint=" #f5b041 "
+                app:layout_constraintBottom_toTopOf="@+id/BotonQueHago"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.453" />
+
             <ImageButton
                 android:id="@+id/button_info2"
                 android:layout_width="wrap_content"
@@ -64,24 +88,25 @@
                 android:layout_marginRight="93dp"
                 android:layout_marginBottom="1dp"
                 android:drawableLeft="@drawable/emergencias"
+                android:onClick="llamarEmergencias"
                 android:text="@string/Emergencias"
                 android:textColor="#000000"
                 android:textSize="18sp"
                 android:textStyle="bold|italic"
-                android:onClick="llamarEmergencias"
                 app:backgroundTint=" #f5b041 "
                 app:layout_constraintBottom_toTopOf="@+id/BotonQueHago"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.559" />
+                app:layout_constraintVertical_bias="0.839" />
 
             <Button
                 android:id="@+id/BotonQueHago"
                 android:layout_width="230dp"
                 android:layout_height="69dp"
                 android:drawableLeft="@drawable/queeeehagooo"
+                android:onClick="IrQuehacer"
                 android:text="@string/que_hago_hoy"
                 android:textColor="#191818"
                 android:textSize="18sp"
@@ -89,16 +114,18 @@
                 app:backgroundTint=" #f39c12 "
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintHorizontal_bias="0.486"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                android:onClick= "IrQuehacer" />
+                app:layout_constraintVertical_bias="0.634" />
+
             <Button
                 android:id="@+id/button_noticias"
                 android:layout_width="230dp"
                 android:layout_height="69dp"
                 android:layout_marginTop="1dp"
                 android:drawableLeft="@drawable/buenaanoticia"
+                android:onClick="IrNoticias"
                 android:text="@string/noticias"
                 android:textColor="#000000"
                 android:textColorLink="#FFFFFF"
@@ -110,8 +137,7 @@
                 app:layout_constraintHorizontal_bias="0.486"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/BotonQueHago"
-                app:layout_constraintVertical_bias="0.364"
-                android:onClick="IrNoticias"/>
+                app:layout_constraintVertical_bias="0.314" />
 
             <ImageView
                 android:id="@+id/imageView2"

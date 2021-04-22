@@ -43,4 +43,8 @@ public class Pantalla_senior extends AppCompatActivity {
         AlertDialog dialog = builder.create();
         dialog.show();
     }
+    public void IrJuegos(View view){
+        Intent abrirJuegos = new Intent(this, MenuJuegos.class);
+        startActivity(abrirJuegos);
+    }
 }

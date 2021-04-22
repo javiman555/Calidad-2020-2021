@@ -23,4 +23,5 @@ public class MenuJuegos extends AppCompatActivity {
         Intent abrir_memory = new Intent(this, Memory.class);
         startActivity(abrir_memory);
     }
+
 }

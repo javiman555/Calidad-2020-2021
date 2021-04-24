@@ -18,6 +18,7 @@ public class Buscaminas extends AppCompatActivity implements View.OnTouchListene
     private final Random r = new Random();
 
     private boolean activo = true;
+    private boolean inmortal = false;
     @RequiresApi(api = Build.VERSION_CODES.R)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +59,15 @@ public class Buscaminas extends AppCompatActivity implements View.OnTouchListene
         fondo.invalidate();
     }
 
+    public void inmortal(View v) {
+        if(inmortal){
+            inmortal = false;
+        }else{
+            inmortal = true;
+        }
+
+    }
+
     public boolean onTouch(View v, MotionEvent event) {//Se encarga de ejecutar todos los procesos del buscaminas, es decir ejecutar el juego
         if (activo)
             for (int f = 0; f < 8; f++) {
@@ -76,11 +86,14 @@ public class Buscaminas extends AppCompatActivity implements View.OnTouchListene
     private void hayBomba(int f, int c,MotionEvent event) {//Comprueba si el usuario ha tocado una bomba
         if (fondo.getCasillas()[f][c].dentro((int) event.getX(),
                 (int) event.getY())) {
-            fondo.getCasillas()[f][c].destapado = true;
+                fondo.getCasillas()[f][c].destapado = true;
             if (fondo.getCasillas()[f][c].contenido == 80) {
-                Toast.makeText(this, "Has sido infectado F",
-                        Toast.LENGTH_LONG).show();
-                activo = false;
+                if(!inmortal) {
+                    Toast.makeText(this, "Has sido infectado F", Toast.LENGTH_LONG).show();
+                    activo = false;
+                }else{
+                    fondo.getCasillas()[f][c].destapado = false;
+                }
             } else if (fondo.getCasillas()[f][c].contenido == 0)
                 recorrer(f, c);
             fondo.invalidate();

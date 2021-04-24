@@ -20,6 +20,19 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.13" />
 
+    <Button
+        android:id="@+id/BotonInmortal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="inmortal"
+        android:text="Inmortal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.844" />
+
     <LinearLayout
         android:id="@+id/layout1"
         android:layout_width="311dp"

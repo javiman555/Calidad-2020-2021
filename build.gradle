@@ -1,23 +1,60 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
+    ext.versions = [
+            'kotlin'            : '1.4.0',
+            'powermock'         : '2.0.7',
+            'constraintLayout'  : '2.0.0',
+            'butterknife'       : '10.2.3',
+            'jsonwebtoken'      : '0.10.7',
+            'retrofit'          : '2.9.0',
+            'supportLibrary'    : '1.1.0',
+            'module'            : '3.5.10',
+            'okhttp'            : '4.8.1',
+            'mockito'           : '3.3.3',
+            'lifecycleVersion'  : '2.2.0',
+            'junit'             : '4.13',
+            'eventBus'          : '3.2.0',
+            'picasso'           : '2.71828',
+            'swipeRefreshLayout': '1.1.0',
+            'cardView'          : '1.0.0',
+            'viewPager'         : '1.0.0',
+            'material'          : '1.3.0-alpha02',
+            'rxjava'            : '3.0.4',
+            'rxandroid'         : '3.0.0',
+            'spoon'             : '1.7.1'
+
+    ]
     repositories {
         google()
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.1.2'
+        classpath "io.realm:realm-gradle-plugin:7.0.1"
 
+        classpath 'com.android.tools.build:gradle:4.2.0'
+        //dexBuilderDebug
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
+
+        classpath 'com.android.support:support-v4:28.0.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlin}"
+        classpath "org.jfrog.buildinfo:build-info-extractor-gradle:4.15.2"
+
     }
 }
 
 allprojects {
+
     repositories {
-        google()
         jcenter()
+        google()
+        mavenCentral()
+        maven {
+            url 'https://maven.fabric.io/public'
+        }
     }
 }
+
 
 task clean(type: Delete) {
     delete rootProject.buildDir

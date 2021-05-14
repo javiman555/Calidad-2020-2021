@@ -6,11 +6,13 @@ plugins {
     id 'realm-android'
     id 'kotlin-android-extensions'
 }
+apply plugin: 'jacoco'
 
-sourceCompatibility = 1.6
-targetCompatibility = 1.6
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
-def cucumberVersion = "1.2.4"
+def cucumber_javaVersion = "4.8.1"
+//def cucumberVersion = "1.2.4"
 
 repositories {
     google()
@@ -19,6 +21,7 @@ repositories {
         url 'https://oss.sonatype.org/content/repositories/snapshots/'
     }
 }
+
 
 android {
     compileSdkVersion 30
@@ -92,16 +95,21 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
-    /*implementation 'org.codehaus.groovy:groovy-all:2.4.3'
+    //implementation 'org.codehaus.groovy:groovy-all:2.4.3'
 
-
-    testImplementation 'io.cucumber:cucumber-java:6.8.1'
-    implementation 'info.cukes:cucumber-java:1.2.4'
-    implementation 'info.cukes:cucumber-junit:1.2.4'
-
+    //implementation 'info.cukes:cucumber-java:1.2.4'
+    //implementation 'info.cukes:cucumber-junit:1.2.4'
+    //testImplementation "io.cucumber:cucumber-java:$cucumberVersion"
     //testImplementation "info.cukes:cucumber-junit:$cucumberVersion"
-    testImplementation "info.cukes:cucumber-groovy:$cucumberVersion"*/
+    //testImplementation "info.cukes:cucumber-groovy:$cucumberVersion"
+    //testImplementation "io.cucumber:cucumber-java:$cucumber_javaVersion"
+    //testImplementation "info.cukes:cucumber-junit:$cucumber_javaVersion"
+    //testImplementation "info.cukes:cucumber-groovy:$cucumber_javaVersion"
 
+    //androidTestImplementation project(":cucumber-android")
+    //androidTestImplementation "io.cucumber:cucumber-picocontainer:$cucumber_javaVersion"
+    testImplementation 'io.cucumber:cucumber-java8:2.0.0'
+    testImplementation 'io.cucumber:cucumber-junit:2.0.0'
 
 
 

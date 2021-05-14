@@ -181,4 +181,12 @@ public class Buscaminas extends AppCompatActivity implements View.OnTouchListene
             }
         }
     }
+
+    public boolean getInmortal() {
+        return inmortal;
+    }
+
+    public void setInmortal(boolean inmortal) {
+        this.inmortal = inmortal;
+    }
 }

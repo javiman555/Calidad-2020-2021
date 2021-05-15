@@ -1,0 +1,114 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 5,
+        "name": "Access Games",
+        "description": "",
+        "id": "play-games;access-games",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 168137852,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I am Senior Citicen",
+            "match": {
+              "location": "StepDefinitions_HU1.i_am_senior_citicen()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 112497,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I click play",
+            "match": {
+              "location": "StepDefinitions_HU1.i_click_play()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 73486,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I access the games",
+            "match": {
+              "location": "StepDefinitions_HU1.i_access_the_games()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Play Games",
+    "description": "As a Senior Citicen\nI want to have access to games\nBecause I want to play games",
+    "id": "play-games",
+    "keyword": "Feature",
+    "uri": "HU_1SeniorJuega.feature"
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 5,
+        "name": "Activate Invulnerability",
+        "description": "",
+        "id": "buscaminas-invulnerability;activate-invulnerability",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 125066,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I am playing Buscaminas",
+            "match": {
+              "location": "StepDefinitions_HU2.i_am_playing_buscaminas()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 110562,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I click Invulnerability",
+            "match": {
+              "location": "StepDefinitions_HU2.i_click_invulnerability()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 155168,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I can\u0027t lose",
+            "match": {
+              "location": "StepDefinitions_HU2.i_cant_lose()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Buscaminas Invulnerability",
+    "description": "As a Buscaminas Player\nI want to get Invulnerability\nBecause I want to not lose",
+    "id": "buscaminas-invulnerability",
+    "keyword": "Feature",
+    "uri": "HU_2BuscaminasInmortal.feature"
+  }
+]

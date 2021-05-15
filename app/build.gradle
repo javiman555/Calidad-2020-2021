@@ -92,6 +92,7 @@ dependencies {
     implementation 'androidx.navigation:navigation-ui:2.3.5'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation 'junit:junit:4.13.2'
+    testImplementation 'com.google.android:android:4.1.1.4'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
@@ -108,8 +109,8 @@ dependencies {
 
     //androidTestImplementation project(":cucumber-android")
     //androidTestImplementation "io.cucumber:cucumber-picocontainer:$cucumber_javaVersion"
-    testImplementation 'io.cucumber:cucumber-java8:2.0.0'
-    testImplementation 'io.cucumber:cucumber-junit:2.0.0'
+    testImplementation 'io.cucumber:cucumber-java8:1.2.6'
+    testImplementation 'io.cucumber:cucumber-junit:1.2.6'
 
 
 

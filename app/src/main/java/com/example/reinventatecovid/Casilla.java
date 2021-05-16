@@ -13,4 +13,10 @@ public class Casilla {
     public boolean dentro(int xx,int yy) {//Determina si la casilla existe
         return xx >= this.x && xx <= this.x + ancho && yy >= this.y && yy <= this.y + ancho;
     }
+
+    public Casilla substract(Casilla b) {
+        Casilla c = new Casilla();
+        c.fijarxy(this.x-b.x,this.y-b.y,1);
+        return c;
+    }
 }

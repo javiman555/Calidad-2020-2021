@@ -1,4 +1,4 @@
-Feature: Buscaminas Invulnerability
+Feature: Buscaminas Invulnerability True
   As a Buscaminas Player
   I want to get Invulnerability
   Because I want to not lose

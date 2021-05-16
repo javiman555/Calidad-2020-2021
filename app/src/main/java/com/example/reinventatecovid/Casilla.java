@@ -31,6 +31,8 @@ public class Casilla {
 
 
     public void is_inmortal(boolean inmortal) {
+
         this.inmortal= inmortal;
+
     }
 }

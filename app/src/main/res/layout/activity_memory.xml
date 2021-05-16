@@ -146,6 +146,13 @@
             android:text="salir"
             android:id="@+id/Salir" />
 
+        <Button
+            android:id="@+id/Trampa"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="trampa" />
+
     </LinearLayout>
 
     <LinearLayout

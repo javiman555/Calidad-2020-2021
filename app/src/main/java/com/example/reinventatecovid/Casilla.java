@@ -13,4 +13,10 @@ public class Casilla {
     public boolean dentro(int xx,int yy) {//Determina si la casilla existe
         return xx >= this.x && xx <= this.x + ancho && yy >= this.y && yy <= this.y + ancho;
     }
+
+    public static Casilla suma(Casilla A, Casilla B){
+        Casilla C = new Casilla();
+        C.fijarxy(A.x + B.x,A.y + B.y,1);
+        return C;
+    }
 }

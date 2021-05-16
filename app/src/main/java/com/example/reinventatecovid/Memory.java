@@ -22,7 +22,7 @@ public class Memory extends AppCompatActivity {
             el8, el9, el10, el11, el12, el13, el14, el15;
 
     //los botones del menú
-    Button reiniciar, salir;
+    Button reiniciar, salir, trampa;
 
     //las imágenes
     int imagenes[];
@@ -164,6 +164,14 @@ public class Memory extends AppCompatActivity {
         textoPuntuacion.setText("Puntuación: " + puntuacion);
     }
 
+    public void hacertrampa(){
+        for(int i=0; i<botonera.length; i++) {
+            botonera[i].setScaleType(ImageView.ScaleType.CENTER_CROP);
+            botonera[i].setImageResource(imagenes[arrayBarajado.get(i)]);
+        }
+
+    }
+
     public void cargarImagenes(){
         imagenes = new int[]{
                 R.drawable.bateria,
@@ -228,6 +236,7 @@ public class Memory extends AppCompatActivity {
     public void botonesMenu(){
         reiniciar = (Button) findViewById(R.id.Reiniciar);
         salir = (Button) findViewById(R.id.Salir);
+        trampa = (Button) findViewById(R.id.Trampa);
         reiniciar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -238,6 +247,12 @@ public class Memory extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 finish();
+            }
+        });
+        trampa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                hacertrampa();
             }
         });
     }

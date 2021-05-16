@@ -19,4 +19,12 @@ public class Casilla {
         C.fijarxy(A.x + B.x,A.y + B.y,1);
         return C;
     }
+
+
+
+    public Casilla substract(Casilla a) {
+        Casilla c = new Casilla();
+        c.fijarxy(this.x-a.x,this.y-a.y,1);
+        return c;
+    }
 }

@@ -68,7 +68,7 @@ configurations {
 }
 
 
-task cucumber() {
+/*task cucumber() {
     dependsOn assemble
     doLast {
         javaexec {
@@ -80,6 +80,8 @@ task cucumber() {
 }
 
 build.dependsOn cucumber
+*/
+
 
 
 

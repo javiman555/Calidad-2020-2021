@@ -69,6 +69,16 @@ class Tablero extends View {
             filaActual = filaActual + anchocuadro;
         }
     }
+    public void inmortal(boolean inmortal){
+        for (int f = 0; f < 8; f++) {
+            for (int c = 0; c < 8; c++) {
+                casillas[f][c].is_inmortal(inmortal);
+
+            }
+        }
+
+
+    }
 
     public Casilla[][] getCasillas() {
         return casillas;

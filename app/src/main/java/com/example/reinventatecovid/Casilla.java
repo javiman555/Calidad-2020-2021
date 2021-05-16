@@ -1,6 +1,7 @@
 package com.example.reinventatecovid;
 
 public class Casilla {
+    public boolean inmortal;
     public float x,y,ancho;
     public int contenido=0;
     public boolean destapado=false;
@@ -26,5 +27,10 @@ public class Casilla {
         Casilla c = new Casilla();
         c.fijarxy(this.x-a.x,this.y-a.y,1);
         return c;
+    }
+
+
+    public void is_inmortal(boolean inmortal) {
+        this.inmortal= inmortal;
     }
 }

@@ -62,8 +62,10 @@ public class Buscaminas extends AppCompatActivity implements View.OnTouchListene
     public void inmortal(View v) {
         if(inmortal){
             inmortal = false;
+            fondo.inmortal(false);
         }else{
             inmortal = true;
+            fondo.inmortal(true);
         }
 
     }
@@ -88,7 +90,7 @@ public class Buscaminas extends AppCompatActivity implements View.OnTouchListene
                 (int) event.getY())) {
                 fondo.getCasillas()[f][c].destapado = true;
             if (fondo.getCasillas()[f][c].contenido == 80) {
-                if(!inmortal) {
+                if(!inmortal && !fondo.getCasillas()[f][c].inmortal) {
                     Toast.makeText(this, "Has sido infectado F", Toast.LENGTH_LONG).show();
                     activo = false;
                 }else{

@@ -33,21 +33,21 @@ formatter.match({
   "location": "StepDefinitions_HU1.i_am_senior_citicen()"
 });
 formatter.result({
-  "duration": 160452957,
+  "duration": 157887460,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinitions_HU1.i_click_play()"
 });
 formatter.result({
-  "duration": 124264,
+  "duration": 129239,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinitions_HU1.i_access_the_games()"
 });
 formatter.result({
-  "duration": 107684,
+  "duration": 90852,
   "status": "passed"
 });
 formatter.uri("HU_2BuscaminasInmortaTruel.feature");
@@ -85,21 +85,21 @@ formatter.match({
   "location": "InvulnerabilityTrueTest.i_am_playing_buscaminas()"
 });
 formatter.result({
-  "duration": 2015702,
+  "duration": 1976755,
   "status": "passed"
 });
 formatter.match({
   "location": "InvulnerabilityTrueTest.i_click_invulnerability()"
 });
 formatter.result({
-  "duration": 133847,
+  "duration": 127709,
   "status": "passed"
 });
 formatter.match({
   "location": "InvulnerabilityTrueTest.i_cant_lose()"
 });
 formatter.result({
-  "duration": 2524803,
+  "duration": 2038360,
   "status": "passed"
 });
 formatter.uri("HU_2BuscaminasInmortalFalse.feature");
@@ -142,28 +142,28 @@ formatter.match({
   "location": "InvulnerabilityFalseTest.i_am_playing_buscaminas()"
 });
 formatter.result({
-  "duration": 63448,
+  "duration": 63594,
   "status": "passed"
 });
 formatter.match({
   "location": "InvulnerabilityFalseTest.i_am_invulnerable()"
 });
 formatter.result({
-  "duration": 46548,
+  "duration": 32836,
   "status": "passed"
 });
 formatter.match({
   "location": "InvulnerabilityFalseTest.i_click_invulnerability()"
 });
 formatter.result({
-  "duration": 25300,
+  "duration": 28560,
   "status": "passed"
 });
 formatter.match({
   "location": "InvulnerabilityFalseTest.i_can_lose()"
 });
 formatter.result({
-  "duration": 44166,
+  "duration": 47281,
   "status": "passed"
 });
 formatter.uri("HU_3ComprobarDentroCasillas.feature");
@@ -201,21 +201,21 @@ formatter.match({
   "location": "StepDefinitions_HU3.two_cells_in_23_and_in_43()"
 });
 formatter.result({
-  "duration": 161650,
+  "duration": 153281,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinitions_HU3.i_click_in_33()"
 });
 formatter.result({
-  "duration": 105857,
+  "duration": 89692,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinitions_HU3.i_clicked_in_23_but_out_of_43_cell()"
 });
 formatter.result({
-  "duration": 47847,
+  "duration": 109001,
   "status": "passed"
 });
 formatter.uri("HU_4ComprobarRestaCasilla.feature");
@@ -253,21 +253,21 @@ formatter.match({
   "location": "StepDefinitions_HU4.two_cells_in_33_and_in_43()"
 });
 formatter.result({
-  "duration": 55441,
+  "duration": 69507,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinitions_HU4.i_substract_them()"
 });
 formatter.result({
-  "duration": 20984,
+  "duration": 42818,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinitions_HU4.i_receive_a_new_cell_10()"
 });
 formatter.result({
-  "duration": 57595,
+  "duration": 47050,
   "status": "passed"
 });
 });

@@ -45,18 +45,8 @@ buildscript {
         //classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlin}"
         //classpath "org.jfrog.buildinfo:build-info-extractor-gradle:4.15.2"
 
-
-
-
-
-
     }
 }
-
-
-
-
-
 
 allprojects {
 
@@ -73,10 +63,6 @@ allprojects {
 
     }
 }
-
-
-
-
 task clean(type: Delete) {
     delete rootProject.buildDir
 }

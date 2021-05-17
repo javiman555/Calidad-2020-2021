@@ -119,8 +119,8 @@ dependencies {
 
     //androidTestImplementation project(":cucumber-android")
     //androidTestImplementation "io.cucumber:cucumber-picocontainer:$cucumber_javaVersion"
-    testImplementation 'io.cucumber:cucumber-java8:1.2.6'
-    testImplementation 'io.cucumber:cucumber-junit:1.2.6'
+    testImplementation 'io.cucumber:cucumber-java8:4.8.1'
+    testImplementation 'io.cucumber:cucumber-junit:4.8.1'
 
 
 

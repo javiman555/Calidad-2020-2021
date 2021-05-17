@@ -12,7 +12,7 @@
         "steps": [
           {
             "result": {
-              "duration": 157887460,
+              "duration": 23902811,
               "status": "passed"
             },
             "line": 6,
@@ -24,7 +24,7 @@
           },
           {
             "result": {
-              "duration": 129239,
+              "duration": 117363,
               "status": "passed"
             },
             "line": 7,
@@ -36,7 +36,7 @@
           },
           {
             "result": {
-              "duration": 90852,
+              "duration": 82671,
               "status": "passed"
             },
             "line": 8,
@@ -50,10 +50,11 @@
       }
     ],
     "name": "Play Games",
-    "description": "As a Senior Citicen\nI want to have access to games\nBecause I want to play games",
+    "description": "  As a Senior Citicen\n  I want to have access to games\n  Because I want to play games",
     "id": "play-games",
     "keyword": "Feature",
-    "uri": "HU_1SeniorJuega.feature"
+    "uri": "src/test/resources/gradle/cucumber/HU_1SeniorJuega.feature",
+    "tags": []
   },
   {
     "line": 1,
@@ -68,7 +69,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1976755,
+              "duration": 1790400,
               "status": "passed"
             },
             "line": 6,
@@ -80,7 +81,7 @@
           },
           {
             "result": {
-              "duration": 127709,
+              "duration": 107103,
               "status": "passed"
             },
             "line": 7,
@@ -92,7 +93,7 @@
           },
           {
             "result": {
-              "duration": 2038360,
+              "duration": 1498679,
               "status": "passed"
             },
             "line": 8,
@@ -106,10 +107,11 @@
       }
     ],
     "name": "Buscaminas Invulnerability True",
-    "description": "As a Buscaminas Player\nI want to get Invulnerability\nBecause I want to not lose",
+    "description": "  As a Buscaminas Player\n  I want to get Invulnerability\n  Because I want to not lose",
     "id": "buscaminas-invulnerability-true",
     "keyword": "Feature",
-    "uri": "HU_2BuscaminasInmortaTruel.feature"
+    "uri": "src/test/resources/gradle/cucumber/HU_2BuscaminasInmortaTruel.feature",
+    "tags": []
   },
   {
     "line": 1,
@@ -124,7 +126,7 @@
         "steps": [
           {
             "result": {
-              "duration": 63594,
+              "duration": 97834,
               "status": "passed"
             },
             "line": 6,
@@ -136,7 +138,7 @@
           },
           {
             "result": {
-              "duration": 32836,
+              "duration": 39331,
               "status": "passed"
             },
             "line": 7,
@@ -148,7 +150,7 @@
           },
           {
             "result": {
-              "duration": 28560,
+              "duration": 25113,
               "status": "passed"
             },
             "line": 8,
@@ -160,7 +162,7 @@
           },
           {
             "result": {
-              "duration": 47281,
+              "duration": 44824,
               "status": "passed"
             },
             "line": 9,
@@ -174,10 +176,11 @@
       }
     ],
     "name": "Buscaminas Invulnerability False",
-    "description": "As a Invulnerable Buscaminas Player\nI want to not get Invulnerability\nBecause I want to lose",
+    "description": "  As a Invulnerable Buscaminas Player\n  I want to not get Invulnerability\n  Because I want to lose",
     "id": "buscaminas-invulnerability-false",
     "keyword": "Feature",
-    "uri": "HU_2BuscaminasInmortalFalse.feature"
+    "uri": "src/test/resources/gradle/cucumber/HU_2BuscaminasInmortalFalse.feature",
+    "tags": []
   },
   {
     "line": 1,
@@ -192,7 +195,7 @@
         "steps": [
           {
             "result": {
-              "duration": 153281,
+              "duration": 216520,
               "status": "passed"
             },
             "line": 6,
@@ -204,7 +207,7 @@
           },
           {
             "result": {
-              "duration": 89692,
+              "duration": 83008,
               "status": "passed"
             },
             "line": 7,
@@ -216,7 +219,7 @@
           },
           {
             "result": {
-              "duration": 109001,
+              "duration": 57181,
               "status": "passed"
             },
             "line": 8,
@@ -230,10 +233,11 @@
       }
     ],
     "name": "Comprobar casillas",
-    "description": "As a Buscaminas Player\nI want to check if i click propertly\nBecause I want to click well",
+    "description": "  As a Buscaminas Player\n  I want to check if i click propertly\n  Because I want to click well",
     "id": "comprobar-casillas",
     "keyword": "Feature",
-    "uri": "HU_3ComprobarDentroCasillas.feature"
+    "uri": "src/test/resources/gradle/cucumber/HU_3ComprobarDentroCasillas.feature",
+    "tags": []
   },
   {
     "line": 1,
@@ -248,7 +252,7 @@
         "steps": [
           {
             "result": {
-              "duration": 69507,
+              "duration": 117459,
               "status": "passed"
             },
             "line": 6,
@@ -260,7 +264,7 @@
           },
           {
             "result": {
-              "duration": 42818,
+              "duration": 76868,
               "status": "passed"
             },
             "line": 7,
@@ -272,7 +276,7 @@
           },
           {
             "result": {
-              "duration": 47050,
+              "duration": 57280,
               "status": "passed"
             },
             "line": 8,
@@ -286,9 +290,10 @@
       }
     ],
     "name": "Comprobar resta casillas",
-    "description": "As a Buscaminas Player\nI want to check if i can substract two cells\nBecause I want substract cells",
+    "description": "  As a Buscaminas Player\n  I want to check if i can substract two cells\n  Because I want substract cells",
     "id": "comprobar-resta-casillas",
     "keyword": "Feature",
-    "uri": "HU_4ComprobarRestaCasilla.feature"
+    "uri": "src/test/resources/gradle/cucumber/HU_4ComprobarRestaCasilla.feature",
+    "tags": []
   }
 ]
